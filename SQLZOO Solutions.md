@@ -1,21 +1,21 @@
-#SQLZOO Solutions
-I have compiled the solutions of SQLZOO tutorials
+# SQLZOO_Solutions
+I have compiled the solutions for SQLZOO tutorial
 
-Sections:
-SELECT basics
-SELECT from WORLD
-SELECT from NOBEL
-SELECT in SELECT
-SUM and COUNT
-JOIN
-More JOIN
-Using NULL
-Self JOIN
+## Sections:
+### SELECT basics
+### SELECT from WORLD
+### SELECT from NOBEL
+### SELECT in SELECT
+### SUM and COUNT
+### JOIN
+### More JOIN
+### Using NULL
+### Self JOIN
 
 
-SELECT basics:
+## SELECT basics:
 
-Some simple queries:
+Solutions of SELECT basics in SQLZOO:
 
 1.
 
@@ -35,10 +35,11 @@ SELECT name, area FROM world
  
 
 
-SELECT from WORLD:
+## SELECT from WORLD:
 
 
-Some simple queries to get you started
+Some simple queries to get you started:
+Solutions of SELECT FROM WORLD table from SQLZOO 
 
 1. 
 
@@ -122,4 +123,4 @@ FROM world
 WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%' AND NOT ( name LIKE '% %')
 
 
-
+Stay Tuned for more!!
