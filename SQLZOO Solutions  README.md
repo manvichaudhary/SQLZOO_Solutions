@@ -15,7 +15,7 @@ I have compiled the solutions for SQLZOO tutorial
 
 ## SELECT basics:
 
-Some simple queries:
+Solutions of SELECT basics in SQLZOO:
 
 1.
 
@@ -38,7 +38,8 @@ SELECT name, area FROM world
 ## SELECT from WORLD:
 
 
-Some simple queries to get you started
+Some simple queries to get you started:
+Solutions of SELECT FROM WORLD table from SQLZOO 
 
 1. 
 
