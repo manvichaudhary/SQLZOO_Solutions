@@ -1,19 +1,19 @@
 # SQLZOO_Solutions
 I have compiled the solutions for SQLZOO tutorial
 
-##Sections:
-###SELECT basics
-###SELECT from WORLD
-###SELECT from NOBEL
-###SELECT in SELECT
-###SUM and COUNT
-###JOIN
-###More JOIN
-###Using NULL
-###Self JOIN
+## Sections:
+### SELECT basics
+### SELECT from WORLD
+### SELECT from NOBEL
+### SELECT in SELECT
+### SUM and COUNT
+### JOIN
+### More JOIN
+### Using NULL
+### Self JOIN
 
 
-##SELECT basics:
+## SELECT basics:
 
 Some simple queries:
 
@@ -35,7 +35,7 @@ SELECT name, area FROM world
  
 
 
-SELECT from WORLD:
+## SELECT from WORLD:
 
 
 Some simple queries to get you started
