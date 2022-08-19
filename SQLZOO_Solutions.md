@@ -123,5 +123,93 @@ FROM world
 WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%' AND NOT ( name LIKE '% %')
 
 
+## SELECT FROM NOBEL TUTORIAL
+
+1.
+
+SELECT yr, subject, winner
+  FROM nobel
+ WHERE yr = 1950
+ 
+2.
+
+SELECT winner
+FROM nobel
+WHERE yr = 1962 AND subject = 'Literature'
+
+3.
+
+SELECT yr , subject
+FROM nobel
+WHERE winner = 'Albert Einstein'
+
+4.
+
+SELECT winner
+FROM nobel
+WHERE subject = 'peace' AND yr >= 2000
+
+5.
+
+SELECT *
+FROM nobel
+WHERE subject = 'Literature' AND yr BETWEEN 1980 AND 1989
+
+6.
+
+SELECT * FROM nobel
+WHERE subject = 'Peace' AND winner IN ('Barack Obama' , 'Jimmy Carter' , 'Woodrow Wilson' , 'Theodore Roosevelt')
+
+7.
+
+SELECT winner
+FROM nobel
+WHERE winner LIKE 'John%'
+
+8.
+
+SELECT yr , subject , winner
+FROM nobel
+WHERE (yr = 1984 AND subject = 'chemistry') OR (yr = 1980 AND subject = 'physics')
+
+
+9.
+
+SELECT yr , subject , winner
+FROM nobel
+WHERE yr = 1980 AND NOT subject IN ('chemistry' , 'medicine')
+
+10.
+
+SELECT yr , subject , winner 
+FROM nobel 
+WHERE (subject = 'Literature' AND yr >= 2004) OR ( subject ='Medicine' AND yr < 1910 )
+
+
+11.
+
+SELECT *
+FROM nobel
+WHERE winner LIKE 'PETER GR%'
+
+12.
+
+SELECT *
+FROM nobel
+WHERE winner LIKE 'EUGENE O%'
+
+13.
+
+SELECT winner , yr, subject
+FROM nobel
+WHERE winner LIKE 'Sir%'
+ORDER BY yr DESC , winner
+
+14.
+
+SELECT winner, subject
+  FROM nobel
+ WHERE yr=1984 
+ ORDER BY  subject IN ('Chemistry' , 'physics') ,subject , winner 
 
 Stay Tuned for more!!
