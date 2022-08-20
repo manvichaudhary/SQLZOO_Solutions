@@ -211,5 +211,57 @@ SELECT winner, subject
   FROM nobel
  WHERE yr=1984 
  ORDER BY  subject IN ('Chemistry' , 'physics') ,subject , winner 
+ 
+ 
+ ## SELECT IN SELECT
+ 
+ 1.
+ 
+ SELECT name FROM world
+  WHERE population >
+     (SELECT population FROM world
+      WHERE name='Russia')
+      
+2.
+
+SELECT name 
+FROM world
+WHERE continent = 'Europe' AND gdp/population > (SELECT gdp/population FROM world WHERE name = 'United Kingdom') 
+
+3.
+
+SELECT name , continent 
+FROM world 
+WHERE continent IN (SELECT continent 
+FROM world 
+WHERE name IN ('Argentina' , 'Australia'))
+ORDER BY name
+
+4.
+
+SELECT name , population
+FROM world
+WHERE population > (SELECT population 
+FROM world
+WHERE name = 'United Kingdom') AND population < (SELECT population FROM world WHERE name = 'Germany')
+
+5.
+
+SELECT name, CONCAT(ROUND(population/(SELECT population FROM world
+                          WHERE name = 'Germany')*100,0),'%')
+             FROM world WHERE continent = 'Europe'
+             
+
+
+6.
+
+SELECT name
+FROM world
+WHERE gdp > ALL(SELECT gdp
+                FROM world 
+                WHERE continent = 'Europe' AND gdp > 0)
+                
+                7.
+            
 
 Stay Tuned for more!!
