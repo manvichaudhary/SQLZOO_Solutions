@@ -434,7 +434,10 @@ GROUP BY goal.matchid , game.mdate
 
 12.
 
-
+SELECT matchid, mdate, COUNT(*) FROM goal
+  JOIN game ON (matchid=id)
+  WHERE teamid = 'GER'
+  GROUP BY matchid, mdate
             
 
 Stay Tuned for more!!
