@@ -526,4 +526,54 @@ WHERE name='Rock Hudson'
 GROUP BY yr
 HAVING COUNT(title) > 2
 
+
+12.
+
+SELECT title , name
+FROM movie JOIN casting ON (movieid=movie.id AND ord=1)
+JOIN actor ON (actorid=actor.id)
+WHERE movie.id IN (
+      SELECT movieid FROM casting
+      WHERE actorid IN (
+      SELECT id FROM actor
+      WHERE name = 'Julie Andrews'))
+      
+      
+  13.
+  
+  SELECT actor.name 
+FROM casting
+JOIN actor
+ON casting.actorid = actor.id
+WHERE casting.ord = 1 
+GROUP BY actor.name
+HAVING COUNT(actor.name) >= 15
+ORDER BY actor.name
+
+14.
+
+SELECT movie.title , COUNT(actorid) AS actors 
+FROM movie
+JOIN casting
+ON movie.id = casting.movieid
+WHERE yr = 1978
+GROUP BY title
+ORDER BY actors DESC , title
+
+15.
+
+SELECT distinct actor.name
+FROM movie
+JOIN casting
+ON casting.movieid = movie.id
+JOIN actor
+ON actor.id = casting.actorid
+where movie.id in (select movieid from casting join actor on id =actorid where 
+actor.name = 'Art Garfunkel') and actor.name <> 'Art Garfunkel'
+
+
+
+
+      
+      
 Stay Tuned for more!!
